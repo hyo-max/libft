@@ -6,17 +6,21 @@
 /*   By: hyojpark <hyojpark@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/14 19:16:56 by hyojpark          #+#    #+#             */
-/*   Updated: 2021/11/15 10:27:42 by hyojpark         ###   ########.fr       */
+/*   Updated: 2021/11/15 10:38:33 by hyojpark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
-#include <ctype.h>
 
 
-
+int ft_isalpha(int a)
+{
+	if (('a' <= a && a <= 'z') || ('A' <= a && a <= 'Z'))
+		return (1);
+	return (0);
+}
 
 int main(void)
 {
-	printf("%d\n",isalpha('a'));
+	printf("%d\n",ft_isalpha('1'));
 }
