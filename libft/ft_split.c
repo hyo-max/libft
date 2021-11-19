@@ -1,30 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hyojpark <hyojpark@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/16 20:13:53 by hyojpark          #+#    #+#             */
-/*   Updated: 2021/11/19 15:04:24 by hyojpark         ###   ########.fr       */
+/*   Created: 2021/11/19 15:15:43 by hyojpark          #+#    #+#             */
+/*   Updated: 2021/11/19 17:07:43 by hyojpark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
-#include <string.h>
+#include <stdlib.h>
 
-size_t	ft_strlen(const char *c)
+
+char **ft_split(char const *s, char c)
 {
-	size_t	count;
+	int	i;
 
-	count = 0;
-	while(c[count] != '\0')
-		count++;
-	return (count);
+	i = 0;
+	while (s[i] != c)
+	{
+		
+	}
 }
 
 int main(void)
 {
-	printf("%lu\n", ft_strlen("abcd"));
-	printf("%lu\n", strlen("abcd"));
+	printf("%s\n",ft_split("abc def abd", ' '));
 }
