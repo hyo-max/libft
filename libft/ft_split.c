@@ -6,7 +6,7 @@
 /*   By: hyojpark <hyojpark@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/19 15:15:43 by hyojpark          #+#    #+#             */
-/*   Updated: 2021/11/19 17:07:43 by hyojpark         ###   ########.fr       */
+/*   Updated: 2021/11/19 20:35:44 by hyojpark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,15 +17,27 @@
 char **ft_split(char const *s, char c)
 {
 	int	i;
+	int	word_count;
 
 	i = 0;
-	while (s[i] != c)
+	word_count = 1;
+	while (s[i] != '\0')
 	{
-		
+		if (s[i] == c)
+			word_count++;
 	}
 }
 
 int main(void)
 {
-	printf("%s\n",ft_split("abc def abd", ' '));
+	char **result;
+
+	result = ft_split("abc def abd", ' ');
+	
+	for (int i = 0, i < 4; i++)
+		printf("%s\n",result[i]);
+	
+	free(result);
+	result = NULL;
+
 }
