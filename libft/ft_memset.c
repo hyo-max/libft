@@ -1,30 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hyojpark <hyojpark@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/16 20:13:53 by hyojpark          #+#    #+#             */
-/*   Updated: 2021/11/22 20:39:34 by hyojpark         ###   ########.fr       */
+/*   Created: 2021/11/23 14:05:35 by hyojpark          #+#    #+#             */
+/*   Updated: 2021/11/23 14:19:52 by hyojpark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <string.h>
 
-size_t	ft_strlen(const char *c)
-{
-	size_t	count;
-
-	count = 0;
-	while(c[count] != '\0')
-		count++;
-	return (count);
-}
+// void *ft_memset(void *b, int c, size_t len)
+// {
+	
+// }
 
 int main(void)
 {
-	printf("%lu\n", ft_strlen("abcd"));
-	printf("%lu\n", strlen("abcd"));
+	char a[20];
+	
+	memset(a, 65, sizeof(a));
+
+	for(int i = 0; i < (sizeof(a)/sizeof(char));i++)
+		printf("%c\n", a[i]);
 }

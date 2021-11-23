@@ -6,18 +6,17 @@
 /*   By: hyojpark <hyojpark@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/19 15:15:43 by hyojpark          #+#    #+#             */
-/*   Updated: 2021/11/19 20:35:44 by hyojpark         ###   ########.fr       */
+/*   Updated: 2021/11/22 00:38:29 by hyojpark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <stdlib.h>
 
-
 char **ft_split(char const *s, char c)
 {
-	int	i;
-	int	word_count;
+	int		i;
+	int		word_count;
 
 	i = 0;
 	word_count = 1;
@@ -30,7 +29,7 @@ char **ft_split(char const *s, char c)
 
 int main(void)
 {
-	char **result;
+	char	**result;
 
 	result = ft_split("abc def abd", ' ');
 	
@@ -39,5 +38,4 @@ int main(void)
 	
 	free(result);
 	result = NULL;
-
 }
