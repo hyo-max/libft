@@ -6,12 +6,11 @@
 /*   By: hyojpark <hyojpark@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/14 19:16:56 by hyojpark          #+#    #+#             */
-/*   Updated: 2021/11/16 19:28:27 by hyojpark         ###   ########.fr       */
+/*   Updated: 2021/12/13 22:00:41 by hyojpark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
-
 
 int ft_isalpha(int c)
 {
@@ -22,7 +21,7 @@ int ft_isalpha(int c)
 
 int main(void)
 {
-	printf("%d\n",ft_isalpha('1'));
+	printf("%d\n",ft_isalpha('a'));
 }
 
 
