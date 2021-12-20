@@ -6,11 +6,9 @@
 /*   By: hyojpark <hyojpark@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 18:31:14 by hyojpark          #+#    #+#             */
-/*   Updated: 2021/11/16 19:28:16 by hyojpark         ###   ########.fr       */
+/*   Updated: 2021/12/20 20:43:40 by hyojpark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <stdio.h>
 
 int	ft_isalnum(int c)
 {
@@ -20,15 +18,5 @@ int	ft_isalnum(int c)
 	return (0);
 }
 
-int	main(void)
-{
-	printf("%d\n", ft_isalnum('1'));
-	printf("%d\n", ft_isalnum('a'));
-	printf("%d\n", ft_isalnum(']'));
-	printf("\n");
-	printf("%d\n", ft_isalnum('1'));
-	printf("%d\n", ft_isalnum('a'));
-	printf("%d\n", ft_isalnum(']'));
-}
 
 //매개변수로 들어오는 숫자가 알파벳 또는 숫자면 0이 아닌 값을 반환한다.

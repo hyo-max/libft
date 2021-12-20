@@ -6,24 +6,19 @@
 /*   By: hyojpark <hyojpark@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 14:05:35 by hyojpark          #+#    #+#             */
-/*   Updated: 2021/11/24 23:16:49 by hyojpark         ###   ########.fr       */
+/*   Updated: 2021/12/20 21:03:24 by hyojpark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
-
 void *ft_memset(void *b, int c, size_t len)
 {
+	size_t i;
 	
-}
-
-int main(void)
-{
-	char a[20];
+	i = len;
+	while (i > 0)
+	{
+		b[i] = c;
+		i--;
+	}
 	
-	memset(a, 65, sizeof(a));
-
-	for(int i = 0; i < (sizeof(a)/sizeof(char));i++)
-		printf("%d %c\n",i, a[i]);
 }
