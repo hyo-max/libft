@@ -1,33 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hyojpark <hyojpark@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/27 18:10:23 by hyojpark          #+#    #+#             */
-/*   Updated: 2021/12/28 00:00:20 by hyojpark         ###   ########.fr       */
+/*   Created: 2021/12/28 18:36:05 by hyojpark          #+#    #+#             */
+/*   Updated: 2021/12/28 19:10:35 by hyojpark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t ft_strlcat(char * restrict dst, const char * restrict src, size_t dstsize)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	size_t	dst_l;
-	size_t	src_l;
-	size_t	i;
+	size_t i;
 
-	dst_l = ft_strlen(dst);
-	src_l = ft_strlen(src);
-	if (dstsize < dst_l + 1)
-		return (src_l + dstsize);
 	i = 0;
-	while (src[i] != '\0' && i < (dstsize - dst_l - 1))
+	while (i < n)
 	{
-		dst[dst_l + i] = src[i];
+		if (((unsigned char *)s1)[i] < ((unsigned char *)s2)[i])
+			return (-1);
+		else if (((unsigned char *)s1)[i] > ((unsigned char *)s2)[i])
+			return (1);
 		i++;
 	}
-	dst[dst_l + i] = '\0';
-	return (dst_l + src_l);
+	return (0);
 }

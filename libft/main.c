@@ -6,7 +6,7 @@
 /*   By: hyojpark <hyojpark@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/01 21:34:52 by hyojpark          #+#    #+#             */
-/*   Updated: 2021/12/27 20:03:24 by hyojpark         ###   ########.fr       */
+/*   Updated: 2021/12/29 02:41:01 by hyojpark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@
 
 int main(void)
 {
+	// printf("%lu\n", ft_strlen("abcd"));
+	// printf("%lu\n", strlen("abcd"));
 	// printf("%d\n", ft_isalnum('1'));
 	// printf("%d\n", ft_isalnum('a'));
 	// printf("%d\n", ft_isalnum(']'));
@@ -47,12 +49,30 @@ int main(void)
 	// printf("%s\n",dst);
 	// printf("%lu\n",sizeof(src));
 		
-	char d[] = "12345";
-	char *s = "123456789";
+	// char d[] = "123456789";
+	// char *s = "12345";
 	// printf("%lu\n",sizeof(s)); // 8 
 	// printf("%lu\n",sizeof(d)); // 10
 	// ft_strlcpy(d,s,sizeof(s));
 	
-	printf("%lu\n",ft_strlcpy(d,s,sizeof(d)));
-	// ft_strlcat()
+	// printf("%lu\n",ft_strlcpy(d,s,sizeof(d)));
+	// printf("%lu\n",ft_strlcat(d,s,10));
+	// printf("%s\n",d);
+
+	// char *s = "aaaacdefgaaa";
+	// char c = 'b';
+	// // printf("%s\n",strchr(s,c));
+	// printf("%s\n",ft_strrchr(s,c));
+
+	// char *s1 = "abcd";
+	// char *s2 = "";
+	
+	// printf("%d\n",ft_strncmp(s1,s2,1));
+
+	// printf("%s\n", ((char *)ft_memchr("abcdefg",'z',8)));
+	
+	// printf("%d\n", ft_memcmp("azcd","azcd",2));
+
+	printf("%s\n", ft_strnstr("hi my name is hyojin", "a",9));
+	
 }
