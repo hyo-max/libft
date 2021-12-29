@@ -6,11 +6,11 @@
 /*   By: hyojpark <hyojpark@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/14 19:16:56 by hyojpark          #+#    #+#             */
-/*   Updated: 2021/12/13 22:00:41 by hyojpark         ###   ########.fr       */
+/*   Updated: 2021/12/30 02:51:10 by hyojpark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 int ft_isalpha(int c)
 {
@@ -18,11 +18,3 @@ int ft_isalpha(int c)
 		return (1);
 	return (0);
 }
-
-int main(void)
-{
-	printf("%d\n",ft_isalpha('a'));
-}
-
-
-//매개변수로 들어오는 수가 알파벳일때 ture 아니면 false출력

@@ -6,7 +6,7 @@
 /*   By: hyojpark <hyojpark@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/28 22:13:53 by hyojpark          #+#    #+#             */
-/*   Updated: 2021/12/29 18:50:31 by hyojpark         ###   ########.fr       */
+/*   Updated: 2021/12/30 02:56:14 by hyojpark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char *ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
-	int nee_len;
+	int	nee_len;
 	
 	if (*needle == '\0')
 		return ((char *)haystack);

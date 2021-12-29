@@ -6,12 +6,11 @@
 /*   By: hyojpark <hyojpark@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 19:32:52 by hyojpark          #+#    #+#             */
-/*   Updated: 2021/11/16 20:00:02 by hyojpark         ###   ########.fr       */
+/*   Updated: 2021/12/30 02:53:07 by hyojpark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <ctype.h>
+#include "libft.h"
 
 int	ft_isprint(int c)
 {
@@ -19,12 +18,3 @@ int	ft_isprint(int c)
 		return (1);
 	return (0);
 }
-
-int main(void)
-{
-	printf("%d\n", ft_isprint(127));
-	printf("\n");
-	printf("%d\n", isprint(127));
-}
-
-//127(공백)은 출력대상이 아닌  del(delet)라 제외하고 126까지

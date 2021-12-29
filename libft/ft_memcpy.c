@@ -6,12 +6,11 @@
 /*   By: hyojpark <hyojpark@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/21 21:44:45 by hyojpark          #+#    #+#             */
-/*   Updated: 2021/12/26 17:07:05 by hyojpark         ###   ########.fr       */
+/*   Updated: 2021/12/30 02:54:03 by hyojpark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <unistd.h> 
 
 void	*ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
 {

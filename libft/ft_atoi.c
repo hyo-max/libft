@@ -6,7 +6,7 @@
 /*   By: hyojpark <hyojpark@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/29 18:38:52 by hyojpark          #+#    #+#             */
-/*   Updated: 2021/12/29 19:45:58 by hyojpark         ###   ########.fr       */
+/*   Updated: 2021/12/30 02:51:31 by hyojpark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int space_chack(char a)
 int	ft_atoi(const char *str)
 {
 	int	result;
-	int negative;
+	int	negative;
 
 	result = 0;
 	negative = 1;

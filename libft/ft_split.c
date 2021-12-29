@@ -6,12 +6,11 @@
 /*   By: hyojpark <hyojpark@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/19 15:15:43 by hyojpark          #+#    #+#             */
-/*   Updated: 2021/11/22 00:38:29 by hyojpark         ###   ########.fr       */
+/*   Updated: 2021/12/30 02:54:52 by hyojpark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
+#include "libft.h"
 
 char **ft_split(char const *s, char c)
 {

@@ -6,11 +6,10 @@
 /*   By: hyojpark <hyojpark@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/22 07:41:34 by hyojpark          #+#    #+#             */
-/*   Updated: 2021/12/27 16:51:19 by hyojpark         ###   ########.fr       */
+/*   Updated: 2021/12/30 02:54:18 by hyojpark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
 #include "libft.h"
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
@@ -34,6 +33,5 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 		while (len--)
 			*d-- = *s--;
 	}
-	
 	return (dst);
 }

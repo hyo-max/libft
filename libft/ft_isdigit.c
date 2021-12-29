@@ -6,12 +6,11 @@
 /*   By: hyojpark <hyojpark@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 18:24:35 by hyojpark          #+#    #+#             */
-/*   Updated: 2021/11/16 19:28:33 by hyojpark         ###   ########.fr       */
+/*   Updated: 2021/12/30 02:52:43 by hyojpark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <ctype.h>
+#include "libft.h"
 
 int ft_isdigit(int c)
 {
@@ -19,11 +18,3 @@ int ft_isdigit(int c)
 		return (1);
 	return (0);
 }
-
-int main(void)
-{
-	printf("%d\n",ft_isdigit('9'));
-}
-
-
-// 문자열로 하나씩 받을 때 숫자면 true 아니면 false를 반환하는 함수

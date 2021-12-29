@@ -6,7 +6,7 @@
 /*   By: hyojpark <hyojpark@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/29 19:54:24 by hyojpark          #+#    #+#             */
-/*   Updated: 2021/12/29 23:34:43 by hyojpark         ###   ########.fr       */
+/*   Updated: 2021/12/30 02:51:23 by hyojpark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*ft_calloc(size_t count, size_t size)
 {
-	char *p;
+	char	*p;
 	
 	p = (char *)malloc(sizeof(size) * count);
 	if (!p)

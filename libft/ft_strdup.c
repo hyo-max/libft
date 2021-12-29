@@ -6,7 +6,7 @@
 /*   By: hyojpark <hyojpark@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/29 23:35:55 by hyojpark          #+#    #+#             */
-/*   Updated: 2021/12/30 02:42:48 by hyojpark         ###   ########.fr       */
+/*   Updated: 2021/12/30 02:55:35 by hyojpark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 char *ft_strdup(const char *s1)
 {
-	char *dup;
-	int s1_len;
-	int i;
+	char	*dup;
+	int		s1_len;
+	int		i;
 
 	s1_len = ft_strlen(s1);
 	dup = (char *)malloc(sizeof(char) * (s1_len + 1));
@@ -28,7 +28,5 @@ char *ft_strdup(const char *s1)
 		dup[i] = s1[i];
 		i++;
 	}
-	return (dup);
-	
+	return (dup);	
 }
-

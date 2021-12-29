@@ -6,7 +6,7 @@
 /*   By: hyojpark <hyojpark@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 20:13:53 by hyojpark          #+#    #+#             */
-/*   Updated: 2021/12/27 23:33:27 by hyojpark         ###   ########.fr       */
+/*   Updated: 2021/12/30 02:56:00 by hyojpark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,4 +23,3 @@ size_t	ft_strlen(const char *c)
 		count++;
 	return (count);
 }
-
