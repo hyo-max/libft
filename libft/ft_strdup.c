@@ -1,31 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hyojpark <hyojpark@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/28 22:13:53 by hyojpark          #+#    #+#             */
-/*   Updated: 2021/12/29 18:50:31 by hyojpark         ###   ########.fr       */
+/*   Created: 2021/12/29 23:35:55 by hyojpark          #+#    #+#             */
+/*   Updated: 2021/12/30 02:42:48 by hyojpark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strnstr(const char *haystack, const char *needle, size_t len)
+char *ft_strdup(const char *s1)
 {
-	int nee_len;
-	
-	if (*needle == '\0')
-		return ((char *)haystack);
-	nee_len = ft_strlen(needle);
-	while (*haystack && len-- >= nee_len)
+	char *dup;
+	int s1_len;
+	int i;
+
+	s1_len = ft_strlen(s1);
+	dup = (char *)malloc(sizeof(char) * (s1_len + 1));
+	if (!dup)
+		return (NULL);
+	i = 0;
+	while (s1[i] != '\0')
 	{
-		if (ft_memcmp(haystack,needle,nee_len) == 0)
-		{
-			return ((char *)haystack);
-		}
-		haystack++;
+		dup[i] = s1[i];
+		i++;
 	}
-	return (NULL);
+	return (dup);
+	
 }
+

@@ -6,12 +6,13 @@
 /*   By: hyojpark <hyojpark@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/01 21:34:52 by hyojpark          #+#    #+#             */
-/*   Updated: 2021/12/29 02:41:01 by hyojpark         ###   ########.fr       */
+/*   Updated: 2021/12/29 23:53:09 by hyojpark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
 #include "libft.h"
 
 int main(void)
@@ -73,6 +74,22 @@ int main(void)
 	
 	// printf("%d\n", ft_memcmp("azcd","azcd",2));
 
-	printf("%s\n", ft_strnstr("hi my name is hyojin", "a",9));
-	
+	// printf("%s\n", ft_strnstr("hi my name is hyojin", "in",39));
+
+	// printf("%d\n",atoi("2147483647 4__12abcd"));
+	// printf("%d\n",ft_atoi("2147483647 4__12abcd"));
+
+	// int *p;
+
+	// p = (int *)ft_calloc(10,sizeof(int));
+
+	// for(int i = 0;i<10;i++)
+	// {
+	// 	printf("%d\n",p[i]);
+	// }
+
+	char *me;
+    me = ft_strdup("who am I");
+    printf("%s\n", me);
+
 }
