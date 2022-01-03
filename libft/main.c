@@ -6,7 +6,7 @@
 /*   By: hyojpark <hyojpark@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/01 21:34:52 by hyojpark          #+#    #+#             */
-/*   Updated: 2021/12/29 23:53:09 by hyojpark         ###   ########.fr       */
+/*   Updated: 2022/01/03 14:12:02 by hyojpark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,8 +88,16 @@ int main(void)
 	// 	printf("%d\n",p[i]);
 	// }
 
-	char *me;
-    me = ft_strdup("who am I");
-    printf("%s\n", me);
+	// char *me;
+    // me = ft_strdup("who am I");
+    // printf("%s\n", me);
+
+	// char *a = "abcd";
+	// char *b = "1234";
+	// printf("%s\n",ft_strjoin(a,b));
+	
+	char *a = "1234abcd1234efg123";
+	char *b = "1234";
+	printf("%s\n",ft_strtrim(a,b));
 
 }
