@@ -6,12 +6,11 @@
 /*   By: hyojpark <hyojpark@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/02 21:00:11 by hyojpark          #+#    #+#             */
-/*   Updated: 2022/01/03 14:11:52 by hyojpark         ###   ########.fr       */
+/*   Updated: 2022/01/03 16:05:52 by hyojpark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include<stdio.h>
 
 int str_check(char const s1, char const *set)
 {
