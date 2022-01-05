@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hyojpark <hyojpark@student.42seoul.kr>     +#+  +:+       +#+        */
+/*   By: hyospark <hyospark@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/01 21:34:52 by hyojpark          #+#    #+#             */
-/*   Updated: 2022/01/05 23:18:11 by hyojpark         ###   ########.fr       */
+/*   Updated: 2022/01/06 02:00:20 by hyospark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,16 +15,36 @@
 #include <stdlib.h>
 #include "libft.h"
 
-void striteri_oddcheck(unsigned int i, char *c)
+// void striteri_oddcheck(unsigned int i, char *c)
+// {
+// 	char x;
+// 	x = 'x';
+// 	if(i % 2 == 1)
+// 		return(c);
+// 	else
+// 		return(x);
+// }
+
+void	f(unsigned int a, char *str)
 {
-	char x;
-	x = 'x';
-	if(i % 2 == 1)
-		return(c);
-	else
-		return(x);
+	printf("%c %s\n", a, str);
 }
 
+
+void	ft_striteri(char *s, void (*f)(unsigned int, char*))
+{
+	unsigned int	i;
+
+	if (!s || !f)
+		return ;
+	i = 0;
+	while (s[i])
+	{
+		f(s[i], s + i);
+		// (*f)(i, &s[i]);
+		i++;
+	}
+}
 
 // char strmapi_oddcheck(unsigned int i, char c)
 // {
@@ -190,10 +210,9 @@ int main(void)
 	// str2 = ft_strmapi(str1, *strmapi_oddcheck);
 	// printf("str2 : %s\n",str2);	// str2 : xbxdxfxhxjxlxnxpxrxtxvxxxz
 
-	char str1[] = "abcdefghijklmnopqrstuvwxyz";
+	char str1[] = "abcd";
 	char *str2;
-	str2 = ft_striteri(str1, *strmapi_oddcheck);
-	printf("str2 : %s\n",str2);	// str2 : xbxdxfxhxjxlxnxpxrxtxvxxxz
 
-
+	ft_striteri(str1, &f);
+	// printf("str2 : %s\n",str2);	// str2 : xbxdxfxhxjxlxnxpxrxtxvxxxz
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hyojpark <hyojpark@student.42seoul.kr>     +#+  +:+       +#+        */
+/*   By: hyospark <hyospark@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/05 17:46:45 by hyojpark          #+#    #+#             */
-/*   Updated: 2022/01/05 23:42:59 by hyojpark         ###   ########.fr       */
+/*   Updated: 2022/01/06 02:00:47 by hyospark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,11 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 	unsigned int	i;
 
 	if (!s || !f)
-		return (NULL);
+		return ;
 	i = 0;
 	while (s[i])
 	{
-		f(i, s + i);
+		f(s[i], s + i);
 		// (*f)(i, &s[i]);
 		i++;
 	}
