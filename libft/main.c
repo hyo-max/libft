@@ -6,7 +6,7 @@
 /*   By: hyojpark <hyojpark@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/01 21:34:52 by hyojpark          #+#    #+#             */
-/*   Updated: 2022/01/05 16:25:17 by hyojpark         ###   ########.fr       */
+/*   Updated: 2022/01/05 23:18:11 by hyojpark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 #include <stdlib.h>
 #include "libft.h"
 
-char strmapi_oddcheck(unsigned int i, char c)
+void striteri_oddcheck(unsigned int i, char *c)
 {
 	char x;
 	x = 'x';
@@ -24,6 +24,17 @@ char strmapi_oddcheck(unsigned int i, char c)
 	else
 		return(x);
 }
+
+
+// char strmapi_oddcheck(unsigned int i, char c)
+// {
+// 	char x;
+// 	x = 'x';
+// 	if(i % 2 == 1)
+// 		return(c);
+// 	else
+// 		return(x);
+// }
 
 int main(void)
 {
@@ -174,10 +185,14 @@ int main(void)
     // printf("f empty  : %d\n", ft_atoi(""));
     // return (0);
 
+	// char str1[] = "abcdefghijklmnopqrstuvwxyz";
+	// char *str2;
+	// str2 = ft_strmapi(str1, *strmapi_oddcheck);
+	// printf("str2 : %s\n",str2);	// str2 : xbxdxfxhxjxlxnxpxrxtxvxxxz
 
 	char str1[] = "abcdefghijklmnopqrstuvwxyz";
 	char *str2;
-	str2 = ft_strmapi(str1, *strmapi_oddcheck);
+	str2 = ft_striteri(str1, *strmapi_oddcheck);
 	printf("str2 : %s\n",str2);	// str2 : xbxdxfxhxjxlxnxpxrxtxvxxxz
 
 

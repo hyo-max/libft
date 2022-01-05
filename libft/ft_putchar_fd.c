@@ -6,7 +6,13 @@
 /*   By: hyojpark <hyojpark@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/30 02:54:35 by hyojpark          #+#    #+#             */
-/*   Updated: 2021/12/30 02:54:36 by hyojpark         ###   ########.fr       */
+/*   Updated: 2022/01/06 00:06:37 by hyojpark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
+void ft_putchar_fd(char c, int fd)
+{
+	
+}
