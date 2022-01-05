@@ -6,7 +6,7 @@
 /*   By: hyojpark <hyojpark@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/01 21:34:52 by hyojpark          #+#    #+#             */
-/*   Updated: 2022/01/04 18:27:59 by hyojpark         ###   ########.fr       */
+/*   Updated: 2022/01/05 16:25:17 by hyojpark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,16 @@
 #include <string.h>
 #include <stdlib.h>
 #include "libft.h"
+
+char strmapi_oddcheck(unsigned int i, char c)
+{
+	char x;
+	x = 'x';
+	if(i % 2 == 1)
+		return(c);
+	else
+		return(x);
+}
 
 int main(void)
 {
@@ -112,7 +122,7 @@ int main(void)
 	// /* ft_split("a12aaa12", 'a') = ["12", "12"]과 같은 방식으로 특정 문자가 
 	// 덕지덕지 붙어있는 경우에도 잘 처리해야 한다.*/
 
-	printf("%s\n",ft_itoa(-2147483648));
+	// printf("%s\n",ft_itoa(-2147483648));
 
 	//  printf("a int max 2147483647 : %d\n", atoi("2147483647"));
     // printf("f int max 2147483647 : %d\n", ft_atoi("2147483647"));
@@ -163,5 +173,12 @@ int main(void)
     // printf("a empty  : %d\n", atoi(""));
     // printf("f empty  : %d\n", ft_atoi(""));
     // return (0);
+
+
+	char str1[] = "abcdefghijklmnopqrstuvwxyz";
+	char *str2;
+	str2 = ft_strmapi(str1, *strmapi_oddcheck);
+	printf("str2 : %s\n",str2);	// str2 : xbxdxfxhxjxlxnxpxrxtxvxxxz
+
 
 }
