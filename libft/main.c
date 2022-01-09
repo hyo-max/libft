@@ -6,7 +6,7 @@
 /*   By: hyojpark <hyojpark@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/01 21:34:52 by hyojpark          #+#    #+#             */
-/*   Updated: 2022/01/08 22:11:26 by hyojpark         ###   ########.fr       */
+/*   Updated: 2022/01/09 14:40:04 by hyojpark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -206,10 +206,11 @@ int main(void)
  	// ft_putnbr_fd(-2147483648, 2);
  	// return(0);
 	 
- 	char *content = "CONTENT.";
- 	t_list *result = ft_lstnew((void *)content);
- 	printf("The content is %s", (char *)result->content);
- 	return 0;
+ 	// char *content = "CONTENT.";
+ 	// t_list *result = ft_lstnew((void *)content);
+ 	// printf("The content is %s", (char *)result->content);
+ 	// return 0;
 
-	
+
+
 }
