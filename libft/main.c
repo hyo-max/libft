@@ -6,7 +6,7 @@
 /*   By: hyojpark <hyojpark@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/01 21:34:52 by hyojpark          #+#    #+#             */
-/*   Updated: 2022/01/09 14:40:04 by hyojpark         ###   ########.fr       */
+/*   Updated: 2022/01/13 04:02:25 by hyojpark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,11 @@
 #include <string.h>
 #include <stdlib.h>
 #include "libft.h"
+
+void	del(void *content)
+{
+	free(content);
+}
 
 // void	f(unsigned int a, char *str)
 // {
@@ -212,5 +217,33 @@ int main(void)
  	// return 0;
 
 
+	// char *a = "abcd";
+	// t_list *lst = (t_list *)malloc(sizeof(t_list));
+	// if (!lst)
+	// 	return(2);
+	// lst->content = a;
+	// lst->next = NULL;
+	// printf("%s\n",(char *)lst->content);
+
+	// t_list *temp;
+	// lst->next = temp;
+	// while (temp->next)
+	// {
+	// 	printf("%s\n",(char *)temp->content);
+	// 	temp = temp->next;
+	// }
+
+	t_list *lst = (t_list *)malloc(sizeof(t_list));
+	char *a;
+	a =  (char *)malloc(sizeof(char) * 3);
+	a[0] = 'a';
+	a[1] = 'b';
+	a[2] = '\0';
+	lst->content = a;
+	lst->next = NULL;
+	printf("%s\n", (const char *)lst->content);
+	ft_lstdelone(lst, &del);
+	printf("%s\n", (const char *)lst->content);
+	return 0;
 
 }
