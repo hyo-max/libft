@@ -6,13 +6,13 @@
 /*   By: hyojpark <hyojpark@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/30 02:54:35 by hyojpark          #+#    #+#             */
-/*   Updated: 2022/01/07 17:24:35 by hyojpark         ###   ########.fr       */
+/*   Updated: 2022/01/29 03:42:17 by hyojpark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_putchar_fd(char c, int fd)
+void	ft_putchar_fd(char c, int fd)
 {
 	if (fd < 0)
 		return ;

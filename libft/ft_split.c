@@ -6,7 +6,7 @@
 /*   By: hyojpark <hyojpark@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/19 15:15:43 by hyojpark          #+#    #+#             */
-/*   Updated: 2022/01/03 22:18:03 by hyojpark         ###   ########.fr       */
+/*   Updated: 2022/01/29 03:33:22 by hyojpark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,6 +79,8 @@ char	**ft_split(char const *s, char c)
 	int		word_num;
 	int		i;
 
+	if (!s)
+		return (NULL);
 	word_num = word_count(s, c);
 	result = (char **)malloc(sizeof(char *) * (word_num + 1));
 	if (!result)

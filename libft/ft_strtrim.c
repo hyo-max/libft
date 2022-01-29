@@ -6,13 +6,13 @@
 /*   By: hyojpark <hyojpark@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/02 21:00:11 by hyojpark          #+#    #+#             */
-/*   Updated: 2022/01/03 16:05:52 by hyojpark         ###   ########.fr       */
+/*   Updated: 2022/01/29 03:32:25 by hyojpark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int str_check(char const s1, char const *set)
+int	str_check(char const s1, char const *set)
 {
 	int	i;
 
@@ -26,7 +26,7 @@ int str_check(char const s1, char const *set)
 	return (0);
 }
 
-char *ft_strtrim(char const *s1, char const *set)
+char	*ft_strtrim(char const *s1, char const *set)
 {
 	char	*trim;
 	size_t	start;
@@ -34,15 +34,15 @@ char *ft_strtrim(char const *s1, char const *set)
 	size_t	i;
 
 	start = 0;
-	end = ft_strlen(s1);
 	if (!s1 || !set)
 		return (NULL);
+	end = ft_strlen(s1);
 	while (s1[start] != '\0' && str_check(s1[start], set))
 		start++;
-	while (str_check(s1[end - 1], set))
+	while (start <= end && str_check(s1[end - 1], set))
 		end--;
 	trim = (char *)malloc(sizeof(char) * (end - start + 1));
-	if (!trim)
+	if (!(trim))
 		return (NULL);
 	i = 0;
 	while (start < end)

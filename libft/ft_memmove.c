@@ -6,7 +6,7 @@
 /*   By: hyojpark <hyojpark@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/22 07:41:34 by hyojpark          #+#    #+#             */
-/*   Updated: 2021/12/30 02:54:18 by hyojpark         ###   ########.fr       */
+/*   Updated: 2022/01/29 03:30:27 by hyojpark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 {
 	unsigned char	*d;
 	unsigned char	*s;
-	
+
 	if (dst == NULL && src == NULL)
 		return (dst);
 	if (dst < src)

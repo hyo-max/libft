@@ -6,7 +6,7 @@
 /*   By: hyojpark <hyojpark@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/01 21:34:52 by hyojpark          #+#    #+#             */
-/*   Updated: 2022/01/13 04:02:25 by hyojpark         ###   ########.fr       */
+/*   Updated: 2022/01/27 15:27:55 by hyojpark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,13 @@
 #include <string.h>
 #include <stdlib.h>
 #include "libft.h"
+#include <fcntl.h>    
 
-void	del(void *content)
-{
-	free(content);
-}
+
+// void	del(void *content)
+// {
+// 	free(content);
+// }
 
 // void	f(unsigned int a, char *str)
 // {
@@ -34,9 +36,16 @@ void	del(void *content)
 // 	else
 // 		return(x);
 // }
-
 int main(void)
 {
+	int fd = open("text.txt",O_WRONLY);
+	ft_putnbr_fd(2147483647,fd);
+
+	// char * str = strdup("1");
+	// str = strdup("0123456789");
+	// printf("%s\n", ft_substr("tripouille", 0, 42000));
+	// printf("%s\n", ft_substr(str, 9, 10));
+
 	// printf("%lu\n", ft_strlen("abcd"));
 	// printf("%lu\n", strlen("abcd"));
 	// printf("%d\n", ft_isalnum('1'));
@@ -233,17 +242,18 @@ int main(void)
 	// 	temp = temp->next;
 	// }
 
-	t_list *lst = (t_list *)malloc(sizeof(t_list));
-	char *a;
-	a =  (char *)malloc(sizeof(char) * 3);
-	a[0] = 'a';
-	a[1] = 'b';
-	a[2] = '\0';
-	lst->content = a;
-	lst->next = NULL;
-	printf("%s\n", (const char *)lst->content);
-	ft_lstdelone(lst, &del);
-	printf("%s\n", (const char *)lst->content);
-	return 0;
+	// t_list *lst = (t_list *)malloc(sizeof(t_list));
+	// char *a;
+	// a =  (char *)malloc(sizeof(char) * 3);
+	// a[0] = 'a';
+	// a[1] = 'b';
+	// a[2] = '\0';
+	// lst->content = a;
+	// lst->next = NULL;
+	// printf("%s\n", (const char *)lst->content);
+	// ft_lstdelone(lst, &del);
+	// printf("%s\n", (const char *)lst->content);
+	// return 0;
+
 
 }

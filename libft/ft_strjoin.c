@@ -6,13 +6,13 @@
 /*   By: hyojpark <hyojpark@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/02 16:38:23 by hyojpark          #+#    #+#             */
-/*   Updated: 2022/01/02 21:12:16 by hyojpark         ###   ########.fr       */
+/*   Updated: 2022/01/29 03:33:13 by hyojpark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strjoin(char const *s1, char const *s2)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*join;
 	int		i;
@@ -29,5 +29,4 @@ char *ft_strjoin(char const *s1, char const *s2)
 		join[i++] = *s2++;
 	join[i] = '\0';
 	return (join);
-	
 }

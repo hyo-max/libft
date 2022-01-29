@@ -6,7 +6,7 @@
 /*   By: hyojpark <hyojpark@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/10 23:34:18 by hyojpark          #+#    #+#             */
-/*   Updated: 2022/01/12 04:19:42 by hyojpark         ###   ########.fr       */
+/*   Updated: 2022/01/29 03:27:54 by hyojpark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	t_list	*last_lst
+	t_list	*last_lst;
 
 	if (!lst || !new)
-		return (NULL);
+		return ;
 	if (!*lst)
 	{
 		*lst = new;

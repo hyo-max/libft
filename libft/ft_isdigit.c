@@ -6,15 +6,15 @@
 /*   By: hyojpark <hyojpark@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 18:24:35 by hyojpark          #+#    #+#             */
-/*   Updated: 2021/12/30 02:52:43 by hyojpark         ###   ########.fr       */
+/*   Updated: 2022/01/29 03:27:20 by hyojpark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isdigit(int c)
+int	ft_isdigit(int c)
 {
-	if ('1' <= c && c <= '9')
+	if ('0' <= c && c <= '9')
 		return (1);
 	return (0);
 }

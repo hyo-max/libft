@@ -6,13 +6,13 @@
 /*   By: hyojpark <hyojpark@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/29 23:35:55 by hyojpark          #+#    #+#             */
-/*   Updated: 2021/12/30 02:55:35 by hyojpark         ###   ########.fr       */
+/*   Updated: 2022/01/29 03:41:04 by hyojpark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strdup(const char *s1)
+char	*ft_strdup(const char *s1)
 {
 	char	*dup;
 	int		s1_len;
@@ -28,5 +28,6 @@ char *ft_strdup(const char *s1)
 		dup[i] = s1[i];
 		i++;
 	}
-	return (dup);	
+	dup[i] = '\0';
+	return (dup);
 }
