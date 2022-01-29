@@ -1,10 +1,5 @@
 NAME	= libft.a
 
-CFLAGS	= -Wall -Werror -Wextra
-
-CC	= gcc
-
-
 SRCS	= ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c\
 		ft_isprint.c ft_strlen.c ft_memset.c ft_bzero.c\
 		ft_memcpy.c ft_memmove.c ft_strlcpy.c ft_strlcat.c\
@@ -19,6 +14,8 @@ BONUS_SRCS	= ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c\
 			ft_lstadd_back.c ft_lstdelone.c ft_lstclear.c ft_lstiter.c\
 			ft_lstmap.c
 
+CC	= gcc
+CFLAGS	= -Wall -Werror -Wextra
 
 AR	= ar
 ARFLAGS	= rcs
@@ -29,12 +26,22 @@ OBJS	= $(SRCS:.c=.o)
 
 BONUS_OBJS	= $(BONUS_SRCS:.c=.o)
 
-OBJ_FILES = ${OBJS} ${BONUS_OBJS}
+ifdef WITH_BONUS
+	OBJ_FILES = $(OBJS) $(BONUS_OBJS)
+else
+	OBJ_FILES = $(OBJS)
+endif
 
 all	: $(NAME)
 
 %.o	: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
+
+$(NAME): $(OBJ_FILES)
+	$(AR) $(ARFLAGS) $@ $^
+
+bonus :
+	make WITH_BONUS=1
 
 clean :
 		$(RM) $(OBJS) $(BONUS_OBJS)
@@ -43,11 +50,5 @@ fclean : clean
 		$(RM) $(NAME)
 
 re:	fclean all
-
-$(NAME): $(OBJ_FILES)
-	$(AR) $(ARFLAGS) $@ $^
-
-bonus :
-	make all
 
 .PHONY	: all clean fclean re bonus
