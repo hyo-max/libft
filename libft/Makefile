@@ -41,7 +41,7 @@ $(NAME): $(OBJ_FILES)
 	$(AR) $(ARFLAGS) $@ $^
 
 bonus :
-	make WITH_BONUS=1
+	@make WITH_BONUS=1 all
 
 clean :
 		$(RM) $(OBJS) $(BONUS_OBJS)
