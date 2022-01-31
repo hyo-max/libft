@@ -6,12 +6,11 @@
 /*   By: hyojpark <hyojpark@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/30 02:53:30 by hyojpark          #+#    #+#             */
-/*   Updated: 2022/01/04 18:29:53 by hyojpark         ###   ########.fr       */
+/*   Updated: 2022/01/30 19:56:25 by hyojpark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include<stdio.h>
 
 long long	negative(int n)
 {

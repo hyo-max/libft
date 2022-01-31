@@ -6,11 +6,11 @@
 /*   By: hyojpark <hyojpark@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 14:05:35 by hyojpark          #+#    #+#             */
-/*   Updated: 2022/01/29 03:30:34 by hyojpark         ###   ########.fr       */
+/*   Updated: 2022/01/30 19:55:12 by hyojpark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h> 
+#include "libft.h"
 
 void	*ft_memset(void *b, int c, size_t len)
 {
