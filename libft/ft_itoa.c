@@ -6,23 +6,13 @@
 /*   By: hyojpark <hyojpark@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/30 02:53:30 by hyojpark          #+#    #+#             */
-/*   Updated: 2022/01/30 19:56:25 by hyojpark         ###   ########.fr       */
+/*   Updated: 2022/02/01 21:34:23 by hyojpark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-long long	negative(int n)
-{
-	long long	num;
-
-	num = n;
-	if (n < 0)
-		return (num * -1);
-	return (num);
-}
-
-int	len_count(long long num)
+int	get_len(long long num)
 {
 	int	count;
 
@@ -35,30 +25,39 @@ int	len_count(long long num)
 	return (count);
 }
 
+int	get_negative(long long num)
+{
+	int	check_neg;
+
+	check_neg = 0;
+	if (num < 0)
+		check_neg = 1;
+	return (check_neg);
+}
+
 char	*ft_itoa(int n)
 {
 	char		*result;
-	long long	num;
-	int			i;
+	int			is_negative;
 	int			len;
+	long long	num;
 
-	num = negative(n);
-	len = len_count(num);
-	if (n < 0)
-		len++;
-	result = (char *)malloc(sizeof(char) * (len + 1));
+	num = (long long)n;
+	is_negative = get_negative(num);
+	if (num < 0)
+		num *= -1;
+	len = get_len(num) + is_negative;
+	result = (char *)malloc(sizeof(char) * len);
 	if (!result)
 		return (NULL);
-	if (n < 0)
-		result[0] = '-';
-	i = 1;
-	while (i <= len)
-	{
-		if (result[len - i] != '-')
-			result[len - i] = (num % 10) + '0';
-		num /= 10;
-		i++;
-	}
 	result[len] = '\0';
+	while (len > is_negative)
+	{
+		len--;
+		result[len] = (num % 10) + '0';
+		num /= 10;
+	}
+	if (is_negative)
+		result[0] = '-';
 	return (result);
 }
