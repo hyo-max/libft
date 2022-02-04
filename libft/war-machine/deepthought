@@ -3,7 +3,7 @@ $> hostname; uname -msr
 parkhyojinui-MacBookPro.local
 Darwin 21.2.0 x86_64
 $> date
-Sun Jan 30 01:20:41 KST 2022
+Tue Feb  1 22:24:14 KST 2022
 $> gcc --version
 Apple clang version 13.0.0 (clang-1300.0.29.3)
 Target: x86_64-apple-darwin21.2.0
@@ -59,7 +59,6 @@ gcc -Wall -Werror -Wextra -c ft_putnbr_fd.c -o ft_putnbr_fd.o
 ar rcs libft.a ft_isalpha.o ft_isdigit.o ft_isalnum.o ft_isascii.o ft_isprint.o ft_strlen.o ft_memset.o ft_bzero.o ft_memcpy.o ft_memmove.o ft_strlcpy.o ft_strlcat.o ft_toupper.o ft_tolower.o ft_strchr.o ft_strrchr.o ft_strncmp.o ft_memchr.o ft_memcmp.o ft_strnstr.o ft_atoi.o ft_calloc.o ft_strdup.o ft_substr.o ft_strjoin.o ft_strtrim.o ft_split.o ft_itoa.o ft_strmapi.o ft_striteri.o ft_putchar_fd.o ft_putstr_fd.o ft_putendl_fd.o ft_putnbr_fd.o
 
 $> make bonus
-make WITH_BONUS=1
 gcc -Wall -Werror -Wextra -c ft_isalpha.c -o ft_isalpha.o
 gcc -Wall -Werror -Wextra -c ft_isdigit.c -o ft_isdigit.o
 gcc -Wall -Werror -Wextra -c ft_isalnum.c -o ft_isalnum.o
@@ -106,7 +105,7 @@ gcc -Wall -Werror -Wextra -c ft_lstmap.c -o ft_lstmap.o
 ar rcs libft.a ft_isalpha.o ft_isdigit.o ft_isalnum.o ft_isascii.o ft_isprint.o ft_strlen.o ft_memset.o ft_bzero.o ft_memcpy.o ft_memmove.o ft_strlcpy.o ft_strlcat.o ft_toupper.o ft_tolower.o ft_strchr.o ft_strrchr.o ft_strncmp.o ft_memchr.o ft_memcmp.o ft_strnstr.o ft_atoi.o ft_calloc.o ft_strdup.o ft_substr.o ft_strjoin.o ft_strtrim.o ft_split.o ft_itoa.o ft_strmapi.o ft_striteri.o ft_putchar_fd.o ft_putstr_fd.o ft_putendl_fd.o ft_putnbr_fd.o ft_lstnew.o ft_lstadd_front.o ft_lstsize.o ft_lstlast.o ft_lstadd_back.o ft_lstdelone.o ft_lstclear.o ft_lstiter.o ft_lstmap.o
 
 $> ls -la libft.a
--rw-r--r--  1 hyo  staff  40368 Jan 30 01:20 /Users/hyo/ex/42born2code/libft/war-machine/dirlibft/libft.a
+-rw-r--r--  1 hyo  staff  40328 Feb  1 22:24 /Users/hyo/ex/42born2code/libft/war-machine/dirlibft/libft.a
 
 = Part1_functions ==============================================================
 
@@ -1134,6 +1133,9 @@ Diff OK :D
 
 = ft_itoa.c ====================================================================
 $> norminette ft_itoa.c | grep -E '(Error|Warning)'
+..//ft_itoa.c: Error!
+Error: BRACE_SHOULD_EOL     (line: 113, col:   1):	Expected newline after brace
+Norme check failed
 $> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_itoa.c main.c libft.a -o user_exe
 
 = Test 1 ===================================================

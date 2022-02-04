@@ -6,7 +6,7 @@
 /*   By: hyojpark <hyojpark@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/01 21:34:52 by hyojpark          #+#    #+#             */
-/*   Updated: 2022/01/31 17:52:46 by hyojpark         ###   ########.fr       */
+/*   Updated: 2022/02/02 20:16:26 by hyojpark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,8 @@
 // }
 int main(void)
 {
+
+	printf("%lu\n", sizeof(t_list));
 	// int fd = open("text.txt",O_WRONLY);
 	// ft_putnbr_fd(2147483647,fd);
 

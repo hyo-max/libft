@@ -6,7 +6,7 @@
 /*   By: hyojpark <hyojpark@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/30 02:53:30 by hyojpark          #+#    #+#             */
-/*   Updated: 2022/02/01 21:34:23 by hyojpark         ###   ########.fr       */
+/*   Updated: 2022/02/01 22:25:40 by hyojpark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ char	*ft_itoa(int n)
 	if (num < 0)
 		num *= -1;
 	len = get_len(num) + is_negative;
-	result = (char *)malloc(sizeof(char) * len);
+	result = (char *)malloc(sizeof(char) * len + 1);
 	if (!result)
 		return (NULL);
 	result[len] = '\0';
